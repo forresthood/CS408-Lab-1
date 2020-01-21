@@ -11,8 +11,10 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
+    private int counter = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+    public void incrementClicked(View v){
+        counter++;
+        TextView t = (TextView) findViewById(R.id.outputView);
+        t.setText(String.valueOf(counter));
+    }
+
+    public void decrementClicked(View v){
+        counter--;
+        TextView t = (TextView) findViewById(R.id.outputView);
+        t.setText(String.valueOf(counter));
     }
 
     @Override
