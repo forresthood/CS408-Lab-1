@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        TextView t = (TextView) findViewById(R.id.outputView);
+        t.setText(String.valueOf(counter));
     }
 
     @Override
